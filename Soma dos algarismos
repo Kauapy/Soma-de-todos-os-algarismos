@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <locale.h>
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+    int numero,soma;
+    printf("Digite um número maior que zero: ");
+    scanf("%d",&numero);
+    if(numero > 0){
+        while(numero > 0){
+            soma+= numero % 10;
+            numero = numero/10;
+        }printf("A soma dos seu algarismos é de: %d",soma);
+    }else{
+        printf("Número inválido");
+    }
+    return 0;
+}
